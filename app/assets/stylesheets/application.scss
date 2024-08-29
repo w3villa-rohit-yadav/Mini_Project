@@ -1,0 +1,533 @@
+@import 'bootstrap';
+
+body {
+  background-image: linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%);
+  min-height: 100vh;
+}
+
+.custom-button {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.home-page {
+  padding-top: 30px;
+  font-size: 40px;
+}
+
+
+
+.btn-warning-custom {
+  background-color: #ff9800; 
+  color: #fff; 
+  border-radius: 5px; /* Rounded corners */
+  padding: 10px 20px; /* Padding for button */
+  font-size: 16px; 
+}
+
+.custom-text {
+  color: black;
+  font-family: 'Arial', sans-serif;
+  font-size: 48px;
+}
+
+//  For Sign
+
+
+.centered-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding: 20px;
+  background-color: #f8f9fa;
+}
+
+.signup-container {
+  width: 600px;
+  margin: auto;
+  padding: 20px;
+  background: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: relative;
+  // padding-top: 10em;
+
+}
+
+.signup-container h2 {
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: #333;
+}
+
+.signup-container .field {
+  margin-bottom: 15px;
+}
+
+.signup-container .field label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.signup-container .field input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.signup-container .actions {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.signup-container .actions input[type="submit"] {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+// .signup-container .actions input[type="submit"]:hover {
+//   background-color: #0056b3;
+// }
+// .signin-link:hover {
+//   text-decoration: underline;
+// }
+
+// .parents {
+//   min-height: 100vh;
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+// }
+
+// .child {
+//   max-width: 500px;
+//   width: 100%;
+// }
+
+// .bg-white {
+//   background-color: white;
+// }
+
+// .text-primary {
+//   color: #002D74 !important;
+// }
+
+// .btn-primary {
+//   border: none;
+// }
+
+// .btn-light {
+//   color: #002D74;
+// }
+
+// .form-control {
+//   border-radius: 0.75rem;
+// }
+
+// .rounded-3 {
+//   border-radius: 1.25rem !important;
+//   /* Increased border radius */
+// }
+
+// .rounded-4 {
+//   border-radius: 1.5rem !important;
+//   /* Increased border radius for more rounded corners */
+// }
+
+// .position-relative {
+//   position: relative;
+// }
+
+// .position-absolute {
+//   position: absolute;
+// }
+
+// .translate-middle-y {
+//   transform: translateY(-50%);
+// }
+
+// .pe-2 {
+//   padding-right: 0.5rem !important;
+// }
+
+// .min-vh-100 {
+//   min-height: 100vh !important;
+// }
+
+// .w-100 {
+//   width: 100% !important;
+// }
+
+// .w-md-75 {
+//   width: 90% !important;
+// }
+
+// .text-muted {
+//   color: #6C757D !important;
+// }
+
+// .shadow-lg {
+//   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+// }
+
+// .p-md-5 {
+//   padding: 2rem;
+// }
+
+// .p-3 {
+//   padding: 1rem;
+// }
+
+/* app/assets/stylesheets/application.css */
+
+
+.parents {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.child {
+  max-width: 500px;
+  width: 100%;
+}
+.bg-white {
+  background-color: white;
+}
+.text-primary {
+  color: #002D74 !important;
+}
+.btn-primary {
+  background-color: #002D74 !important;
+  border: none;
+}
+.btn-light {
+  color: #002D74;
+}
+.form-control {
+  border-radius: 0.75rem;
+}
+.rounded-3 {
+  border-radius: 1.25rem !important; /* Increased border radius */
+}
+.rounded-4 {
+  border-radius: 1.5rem !important; /* Increased border radius for more rounded corners */
+}
+.position-relative {
+  position: relative;
+}
+.position-absolute {
+  position: absolute;
+}
+.translate-middle-y {
+  transform: translateY(-50%);
+}
+.pe-2 {
+  padding-right: 0.5rem !important;
+}
+.min-vh-100 {
+  min-height: 100vh !important;
+}
+.w-100 {
+  width: 100% !important;
+}
+.w-md-75 {
+  width: 90% !important;
+}
+.text-muted {
+  color: #6C757D !important;
+}
+.shadow-lg {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+.p-md-5 {
+  padding: 2rem;
+}
+.p-3 {
+  padding: 1rem;
+}
+
+
+.alert {
+  position: relative;
+  padding: 0.75rem 1.25rem;
+  margin-bottom: 1rem;
+  border: 1px solid transparent;
+  border-radius: 0.375rem;
+}
+
+.alert-dismissible {
+  padding-right: 4rem;
+}
+
+.alert-dismissible .btn-close {
+  position: absolute;
+  top: 0.25rem;
+  right: 0.25rem;
+  padding: 0.25rem 0.5rem;
+  color: inherit;
+  background-color: transparent;
+  border: 0;
+}
+
+.alert-success {
+  color: #155724;
+  background-color: #d4edda;
+  border-color: #c3e6cb;
+}
+
+.alert-error {
+  color: #721c24;
+  background-color: #f8d7da;
+  border-color: #f5c6cb;
+}
+
+.alert-info {
+  color: #0c5460;
+  background-color: #d1ecf1;
+  border-color: #bee5eb;
+}
+
+.alert-warning {
+  color: #856404;
+  background-color: #fff3cd;
+  border-color: #ffeeba;
+}
+
+.login-form-container {
+  width: 600px;
+  margin: 0 auto;
+  /* Center the form horizontally */
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.login-form-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.login-form-container .field {
+  margin-bottom: 15px;
+}
+
+.login-form-container label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.login-form-container input[type="email"],
+.login-form-container input[type="password"] {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.login-form-container .actions {
+  text-align: center;
+}
+
+.login-form-container .actions input[type="submit"] {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.login-form-container .actions input[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+
+.social-login-links {
+  /* Add custom styles here */
+  margin: 20px 0;
+  padding: 10px;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+}
+
+.social-login-links .btn {
+  margin: 5px;
+}
+
+
+
+/* Custom SCSS styles for Premium Plans */
+// .plan-card {
+//   border: 1px solid #ddd;
+//   border-radius: 10px;
+//   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+//   transition: transform 0.3s;
+//   padding: 20px;
+//   text-align: center;
+//   height: 50vh;
+// }
+
+// .plan-card:hover {
+//   transform: scale(1.05);
+// }
+
+// .base-plan {
+//   background-color: #f9f9f9;
+// }
+
+// .silver-plan {
+//   background-color: #e0e0e0;
+// }
+
+// .diamond-plan {
+//   background-color: #e2c4e2;
+//   color: #fff;
+// }
+
+// .card-title {
+//   font-size: 24px;
+//   margin-bottom: 10px;
+// }
+
+// .card-text {
+//   font-size: 16px;
+//   margin-bottom: 20px;
+// }
+
+// .price {
+//   font-size: 20px;
+//   font-weight: bold;
+//   margin-bottom: 20px;
+// }
+
+// .btn-primary {
+//   background-color: #007bff;
+//   border: none;
+//   color: #fff;
+// }
+
+/* app/assets/stylesheets/premium.css.scss */
+
+/* General container and layout styles */
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding-top: 40px;
+}
+
+/* Title and general text styling */
+h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+}
+
+p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Premium plan cards */
+.card {
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+
+  .card-body {
+    text-align: center;
+  }
+
+  .card-title {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+  }
+
+  .card-text {
+    font-size: 1.5rem;
+    color: #555;
+    margin-bottom: 20px;
+  }
+
+  .btn {
+    font-size: 1.2rem;
+    padding: 10px 20px;
+  }
+
+  &:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  }
+}
+
+/* Layout for multiple plans */
+.row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.col-md-4 {
+  flex: 1;
+  margin: 10px;
+}
+
+/* Payment form styles */
+
+.card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.card-header {
+  border-bottom: 1px solid #ddd;
+}
+
+.card-body {
+  padding: 2rem;
+}
+
+#card-element {
+  padding: 10px;
+  border-radius: 4px;
+  border: 1px solid #ced4da;
+}
+
+.btn-block {
+  width: 100%;
+}
+
+
+/* Add custom styles for different plan alerts */
+.alert-info {
+  background-color: #d1ecf1;
+  color: #0c5460;
+}
+
+.alert-warning {
+  background-color: #fff3cd;
+  color: #856404;
+}
+
+.alert-success {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.alert-secondary {
+  background-color: #e2e3e5;
+  color: #6c757d;
+}

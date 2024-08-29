@@ -1,0 +1,40 @@
+<!-- app/views/premium/buy.html.erb -->
+
+<div class="container mt-4">
+  <h1>Choose Your Premium Plan</h1>
+  
+  <div class="row">
+    <!-- Basic Plan -->
+    <div class="col-md-4">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Basic Plan</h5>
+          <p class="card-text">$9.99/month</p>
+          <%= link_to 'Buy Basic', new_payment_path(plan: 'basic'), class: 'btn btn-primary' %>
+        </div>
+      </div>
+    </div>
+
+    <!-- Silver Plan -->
+    <div class="col-md-4">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Silver Plan</h5>
+          <p class="card-text">$19.99/month</p>
+          <%= link_to 'Buy Silver', new_payment_path(plan: 'silver'), class: 'btn btn-secondary' %>
+        </div>
+      </div>
+    </div>
+
+    <!-- Diamond Plan -->
+    <div class="col-md-4">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Diamond Plan</h5>
+          <p class="card-text">$29.99/month</p>
+          <%= link_to 'Buy Diamond', new_payment_path(plan: 'diamond'), class: 'btn btn-warning' %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

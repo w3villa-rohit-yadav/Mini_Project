@@ -1,0 +1,62 @@
+<!-- app/views/payments/new.html.erb -->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Payment</title>
+  <%= stylesheet_link_tag 'application', 'data-turbolinks-track': 'reload' %>
+</head>
+<body>
+  <div class="container mt-5">
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <div class="card shadow-lg">
+          <div class="card-header bg-primary text-white">
+            <h4 class="mb-0">Complete Your Payment</h4>
+          </div>
+          <div class="card-body">
+            <%= form_tag payments_path, id: 'payment-form', method: :post do %>
+              <div class="mb-3">
+                <div id="card-element">
+                  <!-- A Stripe Element will be inserted here. -->
+                </div>
+              </div>
+              <button type="submit" class="btn btn-primary btn-block">Submit Payment</button>
+              <%= hidden_field_tag :plan, @plan %>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://js.stripe.com/v3/"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      var stripe = Stripe('<%= Rails.application.credentials.dig(:stripe, :public_key) %>');
+      var elements = stripe.elements();
+      var card = elements.create('card');
+      card.mount('#card-element');
+
+      var form = document.getElementById('payment-form');
+      form.addEventListener('submit', function(event) {
+        event.preventDefault();
+
+        stripe.createToken(card).then(function(result) {
+          if (result.error) {
+            // Show error in payment form
+            console.error(result.error.message);
+          } else {
+            // Send the token to your server
+            var hiddenInput = document.createElement('input');
+            hiddenInput.setAttribute('type', 'hidden');
+            hiddenInput.setAttribute('name', 'stripeToken');
+            hiddenInput.setAttribute('value', result.token.id);
+            form.appendChild(hiddenInput);
+            form.submit(); // Submit the form to the server
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Confirmation Instructions</h1>
+    <p>Hello <%= @user.email %>,</p>
+    <p>
+      Please confirm your account by clicking the link below:
+    </p>
+    <p>
+    <p>
+    <%= link_to 'Confirm my account', confirmation_url(@user, confirmation_token: @token) %>
+    </p>  
+    </p>
+    <p>Thank you for using our service!</p>
+  </body>
+</html>

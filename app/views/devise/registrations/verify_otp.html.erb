@@ -1,0 +1,14 @@
+<div class="container">
+  <h2>Verify OTP</h2>
+
+  <%= form_with url: confirm_otp_user_registration_path(@user), method: :post, local: true do |f| %>
+    <div class="field">
+      <%= f.label :otp_code, "Enter OTP Code" %><br />
+      <%= f.text_field :otp_code, class: 'form-control', placeholder: 'OTP Code' %>
+    </div>
+
+    <div class="actions">
+      <%= f.submit "Verify OTP", class: 'btn btn-primary' %>
+    </div>
+  <% end %>
+</div>
