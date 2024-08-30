@@ -3,7 +3,6 @@
 <html>
 <head>
   <title>Payment</title>
-  <%= stylesheet_link_tag 'application', 'data-turbolinks-track': 'reload' %>
 </head>
 <body>
   <div class="container mt-5">
@@ -15,12 +14,42 @@
           </div>
           <div class="card-body">
             <%= form_tag payments_path, id: 'payment-form', method: :post do %>
-              <div class="mb-3">
+              
+              <!-- Cardholder Name -->
+              <div class="form-group">
+                <%= label_tag :cardholder_name, "Cardholder Name", class: "form-label" %>
+                <%= text_field_tag :cardholder_name, nil, class: "form-control", placeholder: "Enter cardholder name" %>
+              </div>
+
+              <!-- Card Number -->
+              <div class="form-group">
+                <%= label_tag :card_number, "Card Number", class: "form-label" %>
                 <div id="card-element">
                   <!-- A Stripe Element will be inserted here. -->
                 </div>
               </div>
-              <button type="submit" class="btn btn-primary btn-block">Submit Payment</button>
+
+              <!-- Expiration Date -->
+              <div class="form-group">
+                <div class="row">
+                  <div class="col">
+                    <%= label_tag :exp_month, "Expiration Month", class: "form-label" %>
+                    <%= text_field_tag :exp_month, nil, class: "form-control", placeholder: "MM" %>
+                  </div>
+                  <div class="col">
+                    <%= label_tag :exp_year, "Expiration Year", class: "form-label" %>
+                    <%= text_field_tag :exp_year, nil, class: "form-control", placeholder: "YYYY" %>
+                  </div>
+                </div>
+              </div>
+
+              <!-- CVC -->
+              <div class="form-group">
+                <%= label_tag :cvc, "CVC", class: "form-label" %>
+                <%= text_field_tag :cvc, nil, class: "form-control", placeholder: "CVC" %>
+              </div>
+
+              <button type="submit" class="btn btn-primary btn-block">Pay</button>
               <%= hidden_field_tag :plan, @plan %>
             <% end %>
           </div>

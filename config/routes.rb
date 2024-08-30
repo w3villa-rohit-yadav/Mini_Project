@@ -7,6 +7,9 @@ Rails.application.routes.draw do
     omniauth_callbacks: 'users/omniauth_callbacks'
   }
 
+  # OmniAuth callback routes
+  get '/users/auth/:provider/callback', to: 'users/omniauth_callbacks#handle_callback', as: :omniauth_callback
+
   # Devise scope for custom OTP routes
   devise_scope :user do
     get 'verify_otp/:id', to: 'users/registrations#verify_otp', as: :verify_otp_user_registration

@@ -3,11 +3,10 @@ class User < ApplicationRecord
   # :lockable, :timeoutable, :trackable, and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable,
-         :omniauthable, omniauth_providers: [:google_oauth2]
+         :omniauthable, omniauth_providers: [:google_oauth2, :github]
 
   has_one_attached :profile_picture
-
-  has_many :subscriptions, dependent: :destroy  # Add this line
+  has_many :subscriptions, dependent: :destroy
 
   attr_accessor :otp_code
 
@@ -17,12 +16,19 @@ class User < ApplicationRecord
     where(provider: auth.provider, uid: auth.uid).first_or_create do |user|
       user.email = auth.info.email
       user.password = Devise.friendly_token[0, 20]
+      
       # Optionally attach the profile picture if available
-      # Uncomment the following lines if needed
-      # if auth.info.image
-      #   image_url = URI.parse(auth.info.image)
-      #   user.profile_picture.attach(io: StringIO.new(Net::HTTP.get(URI(image_url))), filename: 'profile_picture.jpg')
-      # end
+      if auth.info.image
+        image_url = URI.parse(auth.info.image)
+        user.profile_picture.attach(io: StringIO.new(Net::HTTP.get(URI(image_url))), filename: 'profile_picture.jpg')
+      end
+
+      # Handle different attributes for different providers
+      if auth.provider == 'github'
+        user.username = auth.info.nickname # Example for GitHub
+      elsif auth.provider == 'google_oauth2'
+        user.full_name = auth.info.name # Example for Google
+      end
     end
   end
 

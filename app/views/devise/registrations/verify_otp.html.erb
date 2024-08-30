@@ -1,9 +1,10 @@
-<div class="container">
-  <h2>Verify OTP</h2>
+<div class="common-padding">
+<div class="container signup-container bg-white rounded-3 shadow p-md-5">
+  <h2 class ="otp">Verify OTP</h2>
 
   <%= form_with url: confirm_otp_user_registration_path(@user), method: :post, local: true do |f| %>
     <div class="field">
-      <%= f.label :otp_code, "Enter OTP Code" %><br />
+    <%= f.label :otp_code, "Enter OTP Code", class: "otp-details" %><br />
       <%= f.text_field :otp_code, class: 'form-control', placeholder: 'OTP Code' %>
     </div>
 
@@ -11,4 +12,5 @@
       <%= f.submit "Verify OTP", class: 'btn btn-primary' %>
     </div>
   <% end %>
+</div>
 </div>

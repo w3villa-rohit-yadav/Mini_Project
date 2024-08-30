@@ -88,3 +88,4 @@ gem "omniauth-rails_csrf_protection"
 gem 'twilio-ruby'
 gem 'phony_rails'
 gem 'stripe'
+gem 'omniauth-github'

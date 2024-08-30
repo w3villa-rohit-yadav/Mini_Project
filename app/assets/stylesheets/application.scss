@@ -5,6 +5,9 @@ body {
   min-height: 100vh;
 }
 
+.common-padding{
+  padding: 20em;
+}
 .custom-button {
   background-color: #007bff;
   color: #fff;
@@ -18,17 +21,18 @@ body {
 
 
 .btn-warning-custom {
-  background-color: #ff9800; 
-  color: #fff; 
-  border-radius: 5px; /* Rounded corners */
-  padding: 10px 20px; /* Padding for button */
-  font-size: 16px; 
+  background-color: #ff9800;
+  color: #fff;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
 }
 
 .custom-text {
   color: black;
   font-family: 'Arial', sans-serif;
   font-size: 48px;
+  font-weight: 700;
 }
 
 //  For Sign
@@ -38,9 +42,8 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
   padding: 20px;
-  background-color: #f8f9fa;
+  height: 100vh;
 }
 
 .signup-container {
@@ -94,99 +97,6 @@ body {
   font-size: 16px;
 }
 
-// .signup-container .actions input[type="submit"]:hover {
-//   background-color: #0056b3;
-// }
-// .signin-link:hover {
-//   text-decoration: underline;
-// }
-
-// .parents {
-//   min-height: 100vh;
-//   display: flex;
-//   align-items: center;
-//   justify-content: center;
-// }
-
-// .child {
-//   max-width: 500px;
-//   width: 100%;
-// }
-
-// .bg-white {
-//   background-color: white;
-// }
-
-// .text-primary {
-//   color: #002D74 !important;
-// }
-
-// .btn-primary {
-//   border: none;
-// }
-
-// .btn-light {
-//   color: #002D74;
-// }
-
-// .form-control {
-//   border-radius: 0.75rem;
-// }
-
-// .rounded-3 {
-//   border-radius: 1.25rem !important;
-//   /* Increased border radius */
-// }
-
-// .rounded-4 {
-//   border-radius: 1.5rem !important;
-//   /* Increased border radius for more rounded corners */
-// }
-
-// .position-relative {
-//   position: relative;
-// }
-
-// .position-absolute {
-//   position: absolute;
-// }
-
-// .translate-middle-y {
-//   transform: translateY(-50%);
-// }
-
-// .pe-2 {
-//   padding-right: 0.5rem !important;
-// }
-
-// .min-vh-100 {
-//   min-height: 100vh !important;
-// }
-
-// .w-100 {
-//   width: 100% !important;
-// }
-
-// .w-md-75 {
-//   width: 90% !important;
-// }
-
-// .text-muted {
-//   color: #6C757D !important;
-// }
-
-// .shadow-lg {
-//   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-// }
-
-// .p-md-5 {
-//   padding: 2rem;
-// }
-
-// .p-3 {
-//   padding: 1rem;
-// }
-
 /* app/assets/stylesheets/application.css */
 
 
@@ -196,62 +106,83 @@ body {
   align-items: center;
   justify-content: center;
 }
+
 .child {
   max-width: 500px;
   width: 100%;
 }
+
 .bg-white {
   background-color: white;
 }
+
 .text-primary {
   color: #002D74 !important;
 }
+
 .btn-primary {
   background-color: #002D74 !important;
   border: none;
 }
+
 .btn-light {
   color: #002D74;
 }
+
 .form-control {
   border-radius: 0.75rem;
 }
+
 .rounded-3 {
-  border-radius: 1.25rem !important; /* Increased border radius */
+  border-radius: 1.25rem !important;
+  /* Increased border radius */
 }
+
 .rounded-4 {
-  border-radius: 1.5rem !important; /* Increased border radius for more rounded corners */
+  border-radius: 1.5rem !important;
+  /* Increased border radius for more rounded corners */
 }
+
 .position-relative {
   position: relative;
 }
+
 .position-absolute {
   position: absolute;
 }
+
 .translate-middle-y {
   transform: translateY(-50%);
 }
+
 .pe-2 {
   padding-right: 0.5rem !important;
 }
+
 .min-vh-100 {
   min-height: 100vh !important;
 }
+
 .w-100 {
   width: 100% !important;
 }
+
 .w-md-75 {
   width: 90% !important;
 }
+
 .text-muted {
   color: #6C757D !important;
 }
+
 .shadow-lg {
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
+
 .p-md-5 {
   padding: 2rem;
 }
+
 .p-3 {
   padding: 1rem;
 }
@@ -367,71 +298,18 @@ body {
   margin: 5px;
 }
 
-
-
-/* Custom SCSS styles for Premium Plans */
-// .plan-card {
-//   border: 1px solid #ddd;
-//   border-radius: 10px;
-//   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-//   transition: transform 0.3s;
-//   padding: 20px;
-//   text-align: center;
-//   height: 50vh;
-// }
-
-// .plan-card:hover {
-//   transform: scale(1.05);
-// }
-
-// .base-plan {
-//   background-color: #f9f9f9;
-// }
-
-// .silver-plan {
-//   background-color: #e0e0e0;
-// }
-
-// .diamond-plan {
-//   background-color: #e2c4e2;
-//   color: #fff;
-// }
-
-// .card-title {
-//   font-size: 24px;
-//   margin-bottom: 10px;
-// }
-
-// .card-text {
-//   font-size: 16px;
-//   margin-bottom: 20px;
-// }
-
-// .price {
-//   font-size: 20px;
-//   font-weight: bold;
-//   margin-bottom: 20px;
-// }
-
-// .btn-primary {
-//   background-color: #007bff;
-//   border: none;
-//   color: #fff;
-// }
-
 /* app/assets/stylesheets/premium.css.scss */
 
 /* General container and layout styles */
+
+// home page css
 .container {
   max-width: 900px;
-  margin: 0 auto;
+  text-align: center;
   padding-top: 40px;
 }
 
-/* Title and general text styling */
 h1 {
-  text-align: center;
-  font-size: 2.5rem;
   margin-bottom: 30px;
 }
 
@@ -487,6 +365,29 @@ p {
 /* Payment form styles */
 
 .card {
+  border-radius: 10px;
+}
+.card-header {
+  border-radius: 10px 10px 0 0;
+}
+.form-group {
+  margin-bottom: 1.5rem;
+}
+.form-control {
+  height: calc(2.25rem + 2px);
+  border-radius: 5px;
+  border: 1px solid #ced4da;
+  padding: .375rem .75rem;
+}
+#card-element {
+  padding: .375rem .75rem;
+  border: 1px solid #ced4da;
+  border-radius: 5px;
+}
+.btn-block {
+  border-radius: 5px;
+}
+.card {
   border: 1px solid #ddd;
   border-radius: 8px;
   overflow: hidden;
@@ -530,4 +431,24 @@ p {
 .alert-secondary {
   background-color: #e2e3e5;
   color: #6c757d;
+}
+
+
+// Otp Styling
+.field{
+  margin: 30px;
+}
+.otp {
+  font-size: 3em;
+  display: flex;
+  justify-content: center;
+
+}
+.otp-details{
+  font-size: 1.5em;
+  margin:10px;
+}
+.actions{
+  display: flex;
+  justify-content: center;
 }

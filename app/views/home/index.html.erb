@@ -8,9 +8,11 @@
   <!-- Navigation Bar -->
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
-      <div>
-        <%= image_tag Rails.application.routes.url_helpers.url_for(current_user.profile_picture), height: '50', width: '50', style: 'border-radius: 50%; border: solid white 1px;' %>
-      </div>
+      <% if current_user.present?%>
+        <div>
+          <%= image_tag Rails.application.routes.url_helpers.url_for(current_user.profile_picture), height: '50', width: '50', style: 'border-radius: 50%; border: solid white 1px;' %>
+        </div>
+      <% end %>
       <!-- Authentication Links -->
       <div class="d-flex gap-3">
         <% if user_signed_in? %>
@@ -26,7 +28,7 @@
   <!-- Body Content -->
   <div class="container mt-4">
     <h1 class="custom-text">Welcome to My App</h1>
-    <p class="custom-text">Here is some content on the page.</p>
+    <p class="custom-title">Here is some content on the page.</p>
 
     <!-- Subscription Status -->
     <% if user_signed_in? %>
@@ -58,16 +60,19 @@
           <p>Consider subscribing to one of our plans to enjoy premium features.</p>
         </div>
       <% end %>
-    <% else %>
+    <% else %>      
       <div class="alert alert-info">
         <h4>Please sign in to view your subscription details.</h4>
       </div>
     <% end %>
 
     <!-- Static Buy Premium Button -->
-    <div class="mt-4">
-      <%= link_to 'Buy Premium', buy_premium_path, class: 'btn btn-warning btn-warning-custom' %>
-    </div>
+    <% if user_signed_in? %>
+
+      <div class="mt-4">
+        <%= link_to 'Buy Premium', buy_premium_path, class: 'btn btn-warning btn-warning-custom' %>
+      </div>
+    <% end %>
   </div>
 
   <script>
